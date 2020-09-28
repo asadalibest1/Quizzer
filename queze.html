@@ -1,0 +1,138 @@
+<style type="text/css">
+
+body{background-image: -webkit-gradient(linear, 30% 2%,150% 150%,
+                                       from(rgb(18, 4, 78)), to(white));
+        /* height: 100%; */
+        } 
+
+      tr:nth-child(3),
+      tr:nth-child(5){background-color: pink;}
+      tr:nth-child(4),
+      tr:nth-child(6){background-color: rgb(142, 188, 206);}
+    
+    div.l{ background-color: black;
+        background-image: -webkit-gradient(linear, 0% 90%,200% 100%, from(rgb(18, 4, 78)), to(white));}
+    .p2{text-align: center;
+        font-size: 30px;
+        font-weight: bold;
+        width: 230px;
+        margin: 30px auto;
+        background-color: rgb(142, 188, 206);}
+    
+    .z{
+        font-weight: bold;
+        text-align: right;
+        padding-right: 12px;}
+  
+    #y{background-image: -webkit-gradient(linear, 0% 90%,200% 100%, from(rgb(18, 4, 78)), to(white));}
+    #x{background-image: -webkit-gradient(linear, 100% 90%,0% 890%, from(rgb(18, 4, 78)), to(white));}
+  
+    td{width: 250px;
+        text-align: center;
+        border-spacing: 0;
+        height: 30px;}
+    h1,table{border-spacing: 0px;
+        text-align: center;
+        }
+    th{height: 30px; text-align: left;
+    background-image: -webkit-gradient(linear,0% 100% , 150% 100%,
+                                       from(rgb(18, 4, 78)), to(white));}
+
+    .SB{
+        margin-top: 85px;
+        font-size: 38px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 50;}
+
+    h1,th,.z,.p2,.quiz{color: white;}
+    
+    table{line-height: 3px;
+        margin: auto;
+        }
+    
+    p.quiz{
+        margin: 15px 10px;
+        font-size: 40px;
+        font-family: dubai light;
+        /* text-decoration: underline; */
+        line-height: 24px;}
+    span{font-size: 60px;}
+    
+    label{padding: 0 76;
+    }
+    .note{background-image: none;}
+    </style>
+<script>
+let arr = ["What is your name:", "2 + 2", "4 - 2", "10 x 5", "6 / 6"];
+var a = prompt("Sir! "+"\n"+ arr[0]);
+
+var ansarr = [prompt("Question no # 1"+"\n"+"Tell me"+"\n" + arr[1])
+            ,prompt("Question no # 2"+"\n"+"Tell me"+"\n" + arr[2])
+            ,prompt("Question no # 3"+"\n"+"Tell me"+"\n" + arr[3])
+            ,prompt("Question no # 4"+"\n"+"Tell me"+"\n" + arr[4])]
+
+</script>
+<html>
+<p class="quiz">Quiz<span>z</span>er<p>
+
+
+    <h1 class="SB">SCORE BOARD</h1>
+<h1><script>document.write("Hi! "+ a);</script></h1>
+
+<table>
+<tr><th class="note">Your Given Remarks is:</th></tr>
+<tr>
+<th colspan="4">
+    <label>Questions:</label>
+    <label>Your Answers:</label>
+    <label>Correct Answers:</label>
+    <label>Remarks:</label>
+</th>
+</tr>
+<tr>
+    <td>2 + 2</td>
+    <td><script>document.write(ansarr[0]);</script></td>
+    <td>4</td>
+    <td><script>if (ansarr[0] === "4"){arr.push(1) ; document.write("Correct");}
+            else {document.write("Un Correct");arr[5] = 0}
+            </script></td>
+</tr>
+<tr>
+    <td>4 - 2</td>
+    <td><script>document.write(ansarr[1]);</script></td>
+    <td>2</td>
+    <td><script>if (ansarr[1] === "2"){arr.push(1) && document.write("Correct");}
+            else {document.write("Un Correct"); arr[6] = 0}
+            </script></td>
+            
+</tr>
+<tr>
+    <td>10 x 5</td>
+    <td><script>document.write(ansarr[2]);</script></td>
+    <td>50</td>
+    <td><script>if (ansarr[2] === "50"){arr.push(1) ; document.write("Correct");}
+            else {document.write("Un Correct"); arr[7] = 0;}
+            </script></td>
+            
+</tr>
+<tr>
+    <td>6 / 6</td>
+    <td><script>document.write(ansarr[3]);</script></td>
+    <td>1</td>
+    <td><script>if (ansarr[3] === "1"){arr.push(1) && document.write("Correct");}
+            else {document.write("Un Correct");arr[8] = 0}
+            </script></td>
+            
+</tr>
+<tr>
+    <td></td>
+    
+    <td id="y" class="z">Total: <script> var totalanswers = arr[5] + arr[6] + arr[7] + arr[8];
+                            document.write(totalanswers);</script></td>
+    <td id="x" class="z">Total: 4</td>
+    <td></td>
+    
+</tr>
+</table>
+<p class="p2">Percentage: <script>document.write(totalanswers*100/4);</script>%</p>
+</html>
